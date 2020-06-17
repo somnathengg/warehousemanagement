@@ -64,9 +64,9 @@ public class UserMstServiceImpl implements UserMstService {
 		try {
 			beans = userMstDao.getUserMstById(id, null);
 		} catch (Exception e) {
-			return ResponseBean.builder().status(ResponseStatus.FAIL).message("SOMETHING_WENT_WRONG").build();
+			return ResponseBean.builder().status(ResponseStatus.FAIL).message("SOMETHING WENT WRONG").build();
 		}
-		return ResponseBean.builder().status(ResponseStatus.SUCCESS).message("RECORD_FETCH_SUCCESSFULLY")
+		return ResponseBean.builder().status(ResponseStatus.SUCCESS).message("RECORD FETCH SUCCESSFULLY")
 				.response(beans).build();
 	}
 
@@ -75,17 +75,13 @@ public class UserMstServiceImpl implements UserMstService {
 	public ResponseBean updateUserMst(UserMstBean bean) {
 
 		try {
-			List<UserMstBean> beans = userMstDao.getUserMstById(bean.getId(), bean.getUsername());
-			if (beans != null && beans.size() > 0) {
-				return ResponseBean.builder().status(ResponseStatus.FAIL).message(" User Already Exist").build();
-			}
 			User pojo = userMstDao.findById(bean.getId()); 
 			pojo = userMstDao.getPojoFromBean(bean, pojo);
 			userMstDao.update(pojo);
-			return ResponseBean.builder().status(ResponseStatus.SUCCESS).message("RECORD_UPDATED_SUCCESSFULLY").response(userMstDao.getBeanFromPojo(pojo)).build();
+			return ResponseBean.builder().status(ResponseStatus.SUCCESS).message("RECORD UPDATED SUCCESSFULLY").response(userMstDao.getBeanFromPojo(pojo)).build();
 			} catch (Exception e) {
 			System.out.println("Exception in :::" + e.getMessage());
-			return ResponseBean.builder().status(ResponseStatus.FAIL).message("SOMETHING_WENT_WRONG").build();
+			return ResponseBean.builder().status(ResponseStatus.FAIL).message("SOMETHING WENT WRONG").build();
 		}
 
 	}

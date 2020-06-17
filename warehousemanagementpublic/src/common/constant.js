@@ -37,14 +37,15 @@ export const addUserConfig = (body) => {
         })
 };
 
-export const successAddUser = (response, setSource, body) => {
+export const successAddUser = (response, setSource, body,setShowMsg,formObjectReset) => {
     if (response.data) {
         setSource(function (existingData) {
             const updatedResponse = [...existingData.loadedData.response.rows];
             updatedResponse.push(response.data.response);
             return userDataFields(updatedResponse);
         })
-        alert(response.data.message);
+        setShowMsg(response.data.message)
+        formObjectReset();
     }
     return response.data;
 };

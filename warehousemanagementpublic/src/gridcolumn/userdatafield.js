@@ -4,12 +4,12 @@ export const userDataFields = (data, gridRef,fname,lname,searchToken) => {
     const dataField = {
         datatype: "json",
         datafields: [
-            { name: 'firstname' },
-            { name: 'lastname' },
-            { name: 'mobile', },
-            { name: 'username' },
-            { name: 'email' },
-            { name: 'id' }
+            { name: 'firstname' , type : 'string'},
+            { name: 'lastname' , type : 'string'},
+            { name: 'mobile', type : 'number'},
+            { name: 'username' , type : 'string'},
+            { name: 'email' , type : 'string'},
+            { name: 'id' ,type : 'string'}
         ],
         url: BASE_URL + FETCH_ALL_USER,
         contentType: "application/json; charset=utf-8",
