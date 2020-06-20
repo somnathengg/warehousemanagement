@@ -6,7 +6,7 @@ export const userDataFields = (data, gridRef,fname,lname,searchToken) => {
         datafields: [
             { name: 'firstname' , type : 'string'},
             { name: 'lastname' , type : 'string'},
-            { name: 'mobile', type : 'number'},
+            { name: 'mobile', type : 'string'},
             { name: 'username' , type : 'string'},
             { name: 'email' , type : 'string'},
             { name: 'id' ,type : 'string'}

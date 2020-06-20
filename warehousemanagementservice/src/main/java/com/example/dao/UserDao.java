@@ -2,6 +2,7 @@ package com.example.dao;
 
 import java.util.List;
 
+import com.example.bean.IdValueBean;
 import com.example.bean.JqxGridDatatableRequestBean;
 import com.example.bean.UserMstBean;
 import com.example.common.dao.GenericDao;

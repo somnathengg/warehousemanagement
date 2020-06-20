@@ -11,7 +11,7 @@ export const getAxios=(axiosConfig)=>
         {
             config['headers']={...axiosConfig.headers};
         }
-        if(axiosConfig.method=='POST')
+        if(axiosConfig.method==='POST')
         {
             return axios({
             method:'POST',

@@ -1,5 +1,8 @@
 package com.example.bean;
 
+import java.io.File;
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Builder;
@@ -17,6 +20,7 @@ public class UserMstBean {
 	private String mobile;
 	private String email;
 	private int isactive;
+	List<UserAddressBean> addressList;
 }
 
 

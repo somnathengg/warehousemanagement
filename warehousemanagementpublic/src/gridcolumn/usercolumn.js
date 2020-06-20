@@ -4,10 +4,6 @@ function onUpdate(count)
 {
     onEdit(count);
 } 
-// function onDelete(count)
-// {
-//    // onRemove(count);
-// } 
 
 function onView(count)
 {
@@ -24,7 +20,7 @@ function onView(count)
     { text: 'Is Active', datafield: 'isactive', cellsalign: 'center',width:100, filterable:false,
     exportable :false,
     cellsrenderer: (rownumber,column,value) => {
-        return value==1 ? '<div class="jqx-grid-cell-left-align" style="margin-top: 5px;"><span class="btn btn-sm green jqx-data-table-icon text-success" title="Yes">Yes</span>' : '<span class="btn btn-sm bg-grey-gallery jqx-data-no-icon jqx-grid-cell-left-align text-danger" title="No" style="margin-top: 5px;">No</span> </div>';
+        return value===1 ? '<div class="jqx-grid-cell-left-align" style="margin-top: 5px;"><span class="btn btn-sm green jqx-data-table-icon text-success" title="Yes">Yes</span>' : '<span class="btn btn-sm bg-grey-gallery jqx-data-no-icon jqx-grid-cell-left-align text-danger" title="No" style="margin-top: 5px;">No</span> </div>';
     }},
     { text: 'Email', datafield: 'email', cellsalign: 'center',filtertype: 'input',width:200,exportable :true},
     {
@@ -33,7 +29,6 @@ function onView(count)
         },
         cellclassname:'editButtonClass',
         buttonclick: (rownumber) => {
-            console.log('rownumber',rownumber);
             return onUpdate(rownumber);
         },
         columntype: 'button',datafield: 'Edit',text:' ',
@@ -54,8 +49,11 @@ function onView(count)
         columntype: 'button',
         datafield: 'View',
         filterable:false,
-        columngroup:'action',text:' ',
-        menu:false
+        columngroup:'action',
+        text:' ',
+        menu:false,
+        exportable :false,
+        width:40,
     }
 ])
 };

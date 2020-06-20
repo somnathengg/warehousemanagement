@@ -7,11 +7,13 @@ import java.util.Map;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.stereotype.Repository;
 
+import com.example.bean.IdValueBean;
 import com.example.bean.JqxGridDatatableRequestBean;
 import com.example.bean.UserMstBean;
 import com.example.common.dao.GenericDaoImpl;
 import com.example.pojo.User;
 import com.example.rowmapper.CountRowMapper;
+import com.example.rowmapper.IdValueRowMapper;
 import com.example.rowmapper.UserRowMapper;
 
 @Repository

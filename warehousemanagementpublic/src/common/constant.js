@@ -2,19 +2,35 @@ import { userDataFields } from '../gridcolumn/userdatafield';
 
 export const BASE_URL = `http://localhost:9000/ReactDemo/`;
 export const FETCH_ALL_USER = `getAllUserForJqxTable`;
+export const FETCH_FIRSTNAME = `getFirstNameList`;
+export const FETCH_LASTNAME = `getLastNameList`;
 export const FETCH_BY_USER_NAME = (firstname, mobile) => `userByUserNameAndMobile?firstname=${firstname}&mobile=${mobile}`;
 export const DELETE_USER_BY_ID = (id) => `deleteUser?id=${id}`;
 export const ADD_USER = `saveUserMst`;
+export const FILE_UPLOAD = `fileupload`;
+export const EXCEL_FILE_UPLOAD = `excelFileUpload`;
 export const UPDATE_USER = `updateUserMst`;
+export const UPDATE_USER_FILE_UPLOAD = `updateUserMstByFile`;
+
 
 export const fetchAllUser = {
     headers: { 'ContentType': 'json' },
     url: FETCH_ALL_USER,
     method: 'POST',
     data:{
-        
     }
+};
 
+export const fetchFirstName = {
+    headers: { 'ContentType': 'json' },
+    url: FETCH_FIRSTNAME,
+    method: 'GET'
+};
+
+export const fetchLastName = {
+    headers: { 'ContentType': 'json' },
+    url: FETCH_LASTNAME,
+    method: 'GET'
 };
 
 export const successFetchUser = (response, setSource) => {

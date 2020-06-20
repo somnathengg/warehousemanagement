@@ -20,7 +20,7 @@ text-align: left;
 .page_bar_heading {
     margin-bottom: 5px;
     padding: 1px 7px;
-    border-bottom: 2px solid #2b364366;
+    /* border-bottom: 2px solid #2b364366; */
 }
 .page_bar {
     margin: 5px 0;
